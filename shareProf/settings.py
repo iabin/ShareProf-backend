@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'shareProf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbmsrl8afme0d5',
+        'OPTIONS': {
+                'options': '-c search_path=api'
+            },
+        'USER': 'bgtmerufqvqklk',
+        'PASSWORD': '4b92a48de77dbd0834c58d9fb73222ed2764994b33fe16ed4aaefc5a2d56227c',
+        'HOST': 'ec2-52-71-85-210.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
