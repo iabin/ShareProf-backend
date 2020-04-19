@@ -1,4 +1,4 @@
-INSERT INTO api_catcountry (`id`, `name`) VALUES
+INSERT INTO api_country (`id`, `name`) VALUES
 (1, 'Australia'),
 (2, 'Austria'),
 (3, 'Azerbaiyán'),
