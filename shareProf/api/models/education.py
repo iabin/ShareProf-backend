@@ -1,7 +1,9 @@
 from django.db import models
+from . import catalog
 
 
 class Institution(models.Model):
+    country = models.ForeignKey(catalog.Country, on_delete=models.PROTECT)
     name = models.CharField(max_length=50)
     acronym = models.CharField(max_length=30)
 
@@ -18,6 +20,7 @@ class Department(models.Model):
 
 
 class Professor(models.Model):
+    city = models.ForeignKey(catalog.City, on_delete=models.PROTECT)
     department = models.ForeignKey(Department, on_delete=models.PROTECT)
     last_name_1 = models.CharField(max_length=50)
     last_name_2 = models.CharField(max_length=50)

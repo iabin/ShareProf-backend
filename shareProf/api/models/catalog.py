@@ -15,7 +15,7 @@ class Country(models.Model):
     name = models.CharField(max_length=50)
 
 
-class Cities(models.Model):
+class City(models.Model):
     country = models.ForeignKey(Country, on_delete=models.PROTECT)
     name = models.CharField(max_length=50)
 

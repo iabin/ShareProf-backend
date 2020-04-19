@@ -1,4 +1,4 @@
-INSERT INTO api_catcities(id,country_id,name) VALUES
+INSERT INTO api_city(id,country_id,name) VALUES
 (1, 3, 'Azerbaijan'),
 (2, 3, 'Nargorni Karabakh'),
 (3, 3, 'Nakhichevanskaya Region'),
