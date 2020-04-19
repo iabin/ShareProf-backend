@@ -9,7 +9,7 @@ class UserInfo(models.Model):
     last_name_2 = models.CharField(max_length=50)
     first_name = models.CharField(max_length=50)
     middle_name = models.CharField(max_length=50)
-    country = models.ForeignKey(catalog.CatCountry,
+    country = models.ForeignKey(catalog.Country,
                                 on_delete=models.PROTECT)
     birth_date = models.DateField()
     verified = models.BooleanField(default=False)

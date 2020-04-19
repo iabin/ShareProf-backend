@@ -1,16 +1,20 @@
 from rest_framework import serializers
-from shareProf.api.models.log import Log
-from shareProf.api.models.log import Ip
+from shareProf.api import models
 
 
 class LogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Log
+        model = models.Log
         fields = '__all__'
 
 
 class IpSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Ip
+        model = models.Ip
         fields = '__all__'
 
+
+class CountrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Country
+        fields = '__all__'

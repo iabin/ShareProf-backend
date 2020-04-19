@@ -1,7 +1,7 @@
 from django.db import models
 from .log import Log
-from .catalog import CatSubjectDifficulty
-from .catalog import CatSubjectExperience
+from .catalog import SubjectDifficulty
+from .catalog import SubjectExperience
 from .user import UserInfo
 from .education import Professor
 from .education import Subject
@@ -14,10 +14,10 @@ class CommentText(models.Model):
 
 
 class Rating(models.Model):
-    class_difficulty = models.ForeignKey(CatSubjectDifficulty,
+    class_difficulty = models.ForeignKey(SubjectDifficulty,
                                          on_delete=models.PROTECT)
 
-    class_experience = models.ForeignKey(CatSubjectExperience,
+    class_experience = models.ForeignKey(SubjectExperience,
                                          on_delete=models.PROTECT)
 
 
