@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Ip(models.Model):
-    ip_address_pk = models.CharField(max_length=15, primary_key=True)
-    country_fk = models.IntegerField()
+    ip_address = models.CharField(max_length=15, unique=True)
+    country = models.IntegerField()
     isp = models.CharField(max_length=50)
 
 
