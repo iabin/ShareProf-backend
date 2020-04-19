@@ -6,10 +6,11 @@ from shareProf.api.models.log import Ip
 class LogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Log
-        fields = ['id', 'operating_system', 'browser', 'device', 'date', 'time', 'ip']
+        fields = '__all__'
 
 
 class IpSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Ip
-        fields = ['ip_address_pk', 'country_fk', 'isp']
+        fields = '__all__'
+
